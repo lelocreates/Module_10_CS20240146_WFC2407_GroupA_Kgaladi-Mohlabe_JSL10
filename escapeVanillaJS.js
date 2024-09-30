@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const message =  await navigateLabyrinth(directions);
                 
             // 🪲 Bug: Incorrect method
-            //! change it from innerHTML to textcontent method-this did not work with an async function 
+            //! change it from innerHTML to text content method-this did not work with an async function 
             document.getElementById("room3Result").innerHTML = message;
             } catch (error) {
                 console.error('Error:', error);
@@ -58,7 +58,7 @@ function findMostRecentBook(books) {
 
 function findIntersection(setA, setB) {
     // 🪲 Bug: Incorrect logic
-    //!add an arrow function that converts the sets into arrays and filters through the arrays and capture the common values in a new array   
+    //!add a method that converts the sets into arrays and filters through the arrays and capture the common values in a new array   
     const intersection = new Set([...setA].filter(concept => setB.has(concept)));
     return intersection;
 }
